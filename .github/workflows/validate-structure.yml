@@ -1,0 +1,25 @@
+name: Validate Project Structure
+
+on:
+  push:
+    branches: [ "**" ]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate required files
+        run: |
+          set -e
+          test -f README.md
+          test -f .gitignore
+          test -f doc/diagrama.lite.md
+          test -f cli/README.md
+          test -f cli/YakkoAgenteLiteCLI.dpr
+          test -f exemplos/01_chatSimples/README.md
+          test -f exemplos/02_cli/README.md
+          echo "Estrutura minima valida."
