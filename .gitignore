@@ -1,0 +1,38 @@
+# Delphi build outputs
+*.dcu
+*.ddp
+*.dsk
+*.identcache
+*.local
+*.map
+*.rsm
+*.tds
+*.drc
+*.stat
+
+# Delphi binaries
+*.exe
+*.dll
+*.bpl
+*.dcp
+*.apk
+*.ipa
+
+# Temporary files
+*.log
+*.tmp
+*.bak
+*.~*
+*.lck
+
+# IDE folders
+__history/
+__recovery/
+
+# OS files
+Thumbs.db
+desktop.ini
+
+# Test and generated outputs
+*.jsonl
+saida*.json
